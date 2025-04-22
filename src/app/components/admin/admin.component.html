@@ -1,0 +1,50 @@
+<!-- <form ngForm class="pt-5">
+  <span class="mt-5">category</span><br>
+  <input type="radio" name="c" value="Grocery" [(ngModel)]="product_data.category">Grocery<br>
+  <input type="radio" name="c" value="Mobiles" [(ngModel)]="product_data.category">Mobiles<br>
+  <input type="radio" name="c" value="Fashion" [(ngModel)]="product_data.category">Mobiles<br>
+  <input type="radio" name="c" value="Electronics" [(ngModel)]="product_data.category">Electronics<br>
+
+  <label for="subcategory">subcategory</label>
+  <input type="text" id="subcategory" name="subcategory" [(ngModel)]="product_data.subcategory"><br>
+
+  <label for="name">name</label>
+  <input type="text" id="name" name="name" [(ngModel)]="product_data.title"><br>
+
+
+  <label for="details">details</label>
+  <input type="text" id="details" name="details" [(ngModel)]="product_data.description"><br>
+
+  <label for="amount">amount</label>
+  <input type="number" id="amount" name="amount" [(ngModel)]="product_data.price"><br>
+
+
+
+  <input type="file" name="file" (change)="onchange($event)">
+  <button (click)="onsubmit()">Submit</button>
+
+  <button (click)="submit2()">submit2</button>
+</form> -->
+
+<div style="padding-top: 5rem !important;">
+  <button class="btn btn-primary" routerLink="addproduct">Add Product</button>
+  <button class="btn btn-primary" routerLink="allorders">All Orders</button>
+</div>
+<router-outlet></router-outlet>
+
+<!-- <form ngForm style="padding-top: 5rem !important;">
+  <div class="container col-md-4 col-10">
+    <input class="form-control mb-3" type="text" #pincode placeholder="Name" name="name" [(ngModel)]="product_data.title">
+    <input class="form-control mb-3" type="number" #city placeholder="Amount" name="amount" [(ngModel)]="product_data.price">
+    <input class="form-control mb-3" type="text" #state placeholder="Details" name="details" [(ngModel)]="product_data.description">
+    <label for="mySelect" class="form-label">Select Category</label>
+    <select id="mySelect" class="form-select mb-3" aria-label="Default select example" name="category" [(ngModel)]="product_data.category">
+      <option value="Shirts">Shirts</option>
+      <option value="Pants">Tshirts</option>
+      <option value="Trousers">Trousers</option>
+    </select>
+    <input class="form-control mb-3" type="text" #mobile placeholder="Subcategory" name="subcategory" [(ngModel)]="product_data.subcategory">
+    <input class="form-control mb-3" type="file" name="file" (change)="onchange($event)">
+    <button class="btn btn-primary" (click)="onsubmit()">Add Product</button>
+  </div>
+</form> -->

@@ -1,0 +1,24 @@
+<ng-container *ngIf="!isLoading">
+  <div class="container py-5">
+    <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2 gx-md-5 gy-md-5 gy-3 g-3 my-0">
+        <div class="col" *ngFor="let product of products">
+            <div class='card border border-0 c_shadow overflow-hidden'>
+              <div class="position-relative">
+                <i class="bi bi-heart position-absolute custom-place" [ngClass]="InWishlist(product) ? 'text-primary':'text-light'" (click)="wishlistclicked(product)"></i>
+                <img (click)="redirectToProduct(product)" [src]="'https://dqrimfn2ifk0w.cloudfront.net/'+product.image" alt="" class='card-img-top image_responsive' style="cursor: pointer;" />
+                <!-- <img (click)="redirectToProduct(product)" src="../../../assets/1.jpg" alt="" class='card-img-top image_responsive' style="cursor: pointer;" /> -->
+              </div>
+                <div class="card-body rounded transparent_background pt-0">
+                    <p class="card-title my-1 text-truncate">{{product.title}}</p>
+                    <div class="d-flex mb-1 p-0 align-items-center">
+                      <i class="bi bi-currency-rupee fw-bold"></i>
+                      <p class="m-0 p-0 fw-bold">{{product.price}}</p>
+                    </div>
+                    <button *ngIf="!Incart(product)" class="btn btn-primary w-100" (click)="AddToCart(product)">Add to Cart</button>
+                    <button *ngIf="Incart(product)" class="btn btn-dark w-100" routerLink="/cart">Go to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</ng-container>
